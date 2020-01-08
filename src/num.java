@@ -5,11 +5,11 @@ public class num {
         this.value = value;
     }
 
-    public int getvalue(){
+    public int getValue(){
         return value;
     }
 
-    public void setvalue(int value){
+    public void setValue(int value){
         this.value = value;
     }
     public String toString(){
@@ -20,4 +20,4 @@ public class num {
         return this.value == otherNumber.value;
         }
     }
-}
+
