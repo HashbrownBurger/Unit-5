@@ -1,12 +1,12 @@
 public class lockableDice implements Lockable{
-        int faceNum;
-        String value;
-        int key;
-        boolean isLocked;
+       private int faceNum;
+       private String value;
+        private int key;
+        private boolean isLocked;
 
-    public lockableDice(int faceNum, boolean isLocked)
+    public lockableDice(int key, boolean isLocked)
     {
-        this.faceNum = faceNum;
+        this.key = key;
         this.isLocked = isLocked;
     }
 
@@ -15,7 +15,7 @@ public class lockableDice implements Lockable{
         }
 
         public void lock(int key) {
-            if(key == this.key)
+            if(this.key == key)
                 isLocked = true;
         }
 
@@ -33,17 +33,18 @@ public class lockableDice implements Lockable{
         {
             if(isLocked) {
                 value = "Dice is Locked";
-                else if (isLocked == false){
+            }
+                else {
                     value = "" + (int) (Math.random() * faceNum) + 1;
                 }
             }
-        }
+
         public String toString()
         {
-            String result = "";
-            result += value;
+            String result;
+            result = " " + value;
             return result;
         }
 
     }
-}
+

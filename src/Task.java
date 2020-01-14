@@ -22,6 +22,6 @@ public class Task implements Priority{
         this.setPriority(-1);
     }
     public String toString(){
-            return "Task " + name + "\nPriority: " + this.getPriority;
+            return "Task " + name + "\nPriority: " + getPriority();
  }
 }

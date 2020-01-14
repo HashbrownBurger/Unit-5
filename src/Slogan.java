@@ -4,7 +4,6 @@ public class Slogan {
     public Slogan(String phrase){
         this.phrase = phrase;
         count ++;
-
     }
 
     public String toString(){
